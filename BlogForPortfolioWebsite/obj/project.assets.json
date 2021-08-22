@@ -24,6 +24,15 @@
           "buildTransitive/netcoreapp3.0/EntityFramework.targets": {}
         }
       },
+      "Humanizer.Core/2.8.26": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Humanizer.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
@@ -136,6 +145,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Design/5.0.9": {
+        "type": "package",
+        "dependencies": {
+          "Humanizer.Core": "2.8.26",
+          "Microsoft.CSharp": "4.7.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.9"
+        },
+        "compile": {
+          "lib/netstandard2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {}
+        },
+        "build": {
+          "build/netcoreapp3.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Relational/5.0.9": {
@@ -496,6 +522,15 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "SqlLocalDb/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net451/SqlLocalDb.dll": {}
+        },
+        "runtime": {
+          "lib/net451/SqlLocalDb.dll": {}
         }
       },
       "System.CodeDom/4.7.0": {
@@ -1632,6 +1667,22 @@
         "tools/netcoreapp3.0/any/ef6.runtimeconfig.json"
       ]
     },
+    "Humanizer.Core/2.8.26": {
+      "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
+      "type": "package",
+      "path": "humanizer.core/2.8.26",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "humanizer.core.2.8.26.nupkg.sha512",
+        "humanizer.core.nuspec",
+        "lib/netstandard1.0/Humanizer.dll",
+        "lib/netstandard1.0/Humanizer.xml",
+        "lib/netstandard2.0/Humanizer.dll",
+        "lib/netstandard2.0/Humanizer.xml",
+        "logo.png"
+      ]
+    },
     "Microsoft.CSharp/4.7.0": {
       "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "type": "package",
@@ -1822,6 +1873,21 @@
         "lib/netstandard2.0/_._",
         "microsoft.entityframeworkcore.analyzers.5.0.9.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Design/5.0.9": {
+      "sha512": "eNf6vkQAdVkYMEADUrXTPtlgxw7EwkbU8jyaOEdz3J/3JFz2yzdVIwJg66RNMuoqDrktAG1bcR64YEys6DXVFw==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.design/5.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "build/netcoreapp3.0/Microsoft.EntityFrameworkCore.Design.props",
+        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll",
+        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.xml",
+        "microsoft.entityframeworkcore.design.5.0.9.nupkg.sha512",
+        "microsoft.entityframeworkcore.design.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/5.0.9": {
@@ -2397,6 +2463,18 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "SqlLocalDb/1.1.0": {
+      "sha512": "BKQGi5uiGJVIzqemSjzrtw+mVgPhawI79qCctJURyo03Cwt6gwwIpT1q1va8Au3dSaLTeZOXELD/vjQvN8h2cQ==",
+      "type": "package",
+      "path": "sqllocaldb/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net451/SqlLocalDb.dll",
+        "sqllocaldb.1.1.0.nupkg.sha512",
+        "sqllocaldb.nuspec"
       ]
     },
     "System.CodeDom/4.7.0": {
@@ -6019,7 +6097,9 @@
     "net5.0": [
       "EntityFramework >= 6.4.4",
       "Microsoft.EntityFrameworkCore >= 5.0.9",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.9"
+      "Microsoft.EntityFrameworkCore.Design >= 5.0.9",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.9",
+      "SqlLocalDb >= 1.1.0"
     ]
   },
   "packageFolders": {
@@ -6067,9 +6147,19 @@
             "target": "Package",
             "version": "[5.0.9, )"
           },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[5.0.9, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[5.0.9, )"
+          },
+          "SqlLocalDb": {
+            "target": "Package",
+            "version": "[1.1.0, )"
           }
         },
         "imports": [
@@ -6093,5 +6183,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SqlLocalDb 1.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SqlLocalDb",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

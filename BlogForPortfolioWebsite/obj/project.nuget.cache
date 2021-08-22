@@ -1,16 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "Xd1HmM1jAQCV9SNaKK0FwSTDm/wwN4WdOTU1wbMkwFB6s3KhrDMGAME3cwKiWc1wN4jNGVjmvyiLbVPFJt2cmw==",
+  "dgSpecHash": "weIZZZ5dK71wWsSLBjQc7bRyogUA87GIgFVcngUPcUxyw36OkvsK35krcWjf7puSoWljKIZT6WBQ9BFTzCJIMA==",
   "success": true,
   "projectFilePath": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Blog Application\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.9\\microsoft.entityframeworkcore.5.0.9.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.9\\microsoft.entityframeworkcore.abstractions.5.0.9.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.9\\microsoft.entityframeworkcore.analyzers.5.0.9.nupkg.sha512",
+    "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.9\\microsoft.entityframeworkcore.design.5.0.9.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.9\\microsoft.entityframeworkcore.relational.5.0.9.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.9\\microsoft.entityframeworkcore.sqlserver.5.0.9.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
@@ -38,6 +40,7 @@
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\sqllocaldb\\1.1.0\\sqllocaldb.1.1.0.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\system.codedom\\4.7.0\\system.codedom.4.7.0.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
@@ -106,5 +109,16 @@
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SqlLocalDb 1.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SqlLocalDb",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }
