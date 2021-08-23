@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Users\\Jerome Tesselaar\\Dropbox\\Blog Application\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj": {}
+    "F:\\Users\\Jerome Tesselaar\\Dropbox\\Responsive Portfolio Website\\Blog_project\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj": {}
   },
   "projects": {
-    "F:\\Users\\Jerome Tesselaar\\Dropbox\\Blog Application\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj": {
+    "F:\\Users\\Jerome Tesselaar\\Dropbox\\Responsive Portfolio Website\\Blog_project\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Blog Application\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj",
+        "projectUniqueName": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Responsive Portfolio Website\\Blog_project\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj",
         "projectName": "BlogForPortfolioWebsite",
-        "projectPath": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Blog Application\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj",
+        "projectPath": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Responsive Portfolio Website\\Blog_project\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj",
         "packagesPath": "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\",
-        "outputPath": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Blog Application\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite\\obj\\",
+        "outputPath": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Responsive Portfolio Website\\Blog_project\\BlogForPortfolioWebsite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jerome Tesselaar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -55,6 +55,22 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.9, )"
+            },
+            "MySQLConnection": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[1.3.11, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             },
             "SqlLocalDb": {
               "target": "Package",
