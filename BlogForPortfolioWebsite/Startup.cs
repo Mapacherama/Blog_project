@@ -37,7 +37,15 @@ namespace BlogForPortfolioWebsite
                     MySqlServerVersion.LatestSupportedServerVersion,
                     optionsMysql => optionsMysql.EnableRetryOnFailure()));
 
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddDefaultIdentity<IdentityUser>(options =>
+                {
+                    options.Password.RequireDigit = false;
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequireUppercase = false;
+                    options.Password.RequiredLength = 8;
+                    
+
+                })
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>();
 
