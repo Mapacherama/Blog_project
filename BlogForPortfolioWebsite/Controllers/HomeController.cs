@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using BlogForPortfolioWebsite.Data;
+using BlogForPortfolioWebsite.Data.Repository;
 using BlogForPortfolioWebsite.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,11 +8,11 @@ namespace BlogForPortfolioWebsite.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly AppDbContext _ctx;
+        private readonly IRepository _repo;
 
-        public HomeController(AppDbContext ctx)
+        public HomeController(IRepository repo)
         {
-            _ctx = ctx;
+            _repo = repo;
         }
 
         public IActionResult Index()
@@ -34,10 +35,13 @@ namespace BlogForPortfolioWebsite.Controllers
         [HttpPost]
         public async Task <IActionResult> Edit(Post post)
         {
-            _ctx.Posts.Add(post);
-            await _ctx.SaveChangesAsync();
+            _repo.AddPost(post);
 
-            return RedirectToAction("Index");
+            if (await _repo.SaveChangesAsync())
+                return RedirectToAction("Index");
+            else
+                return View(post);
+            
         }
 
 

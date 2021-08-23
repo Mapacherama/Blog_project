@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using BlogForPortfolioWebsite.Data;
+using BlogForPortfolioWebsite.Data.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -34,6 +35,9 @@ namespace BlogForPortfolioWebsite
                 options.UseMySql(_configuration.GetConnectionString("DefaultConnection"),
                     MySqlServerVersion.LatestSupportedServerVersion,
                     optionsMysql => optionsMysql.EnableRetryOnFailure()));
+
+            services.AddTransient<IRepository, Repository>();
+            
             services.AddMvc(option => option.EnableEndpointRouting = false);
         }
 
