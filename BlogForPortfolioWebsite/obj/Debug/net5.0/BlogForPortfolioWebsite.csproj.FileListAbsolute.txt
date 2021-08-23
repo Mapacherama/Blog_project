@@ -107,7 +107,6 @@ F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\Blog
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\Newtonsoft.Json.dll
-F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\SqlLocalDb.dll
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\System.CodeDom.dll
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\System.Data.SqlClient.dll
@@ -160,7 +159,6 @@ F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\Blog
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\obj\Debug\net5.0\ref\BlogForPortfolioWebsite.dll
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\obj\Debug\net5.0\BlogForPortfolioWebsite.pdb
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\obj\Debug\net5.0\BlogForPortfolioWebsite.genruntimeconfig.cache
-F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\MySQLConnection.dll
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\MySqlConnector.dll
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\BouncyCastle.Crypto.dll
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\Google.Protobuf.dll
@@ -172,3 +170,13 @@ F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\Blog
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\Zstandard.Net.dll
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\MySql.EntityFrameworkCore.dll
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\BlogForPortfolioWebsite.StaticWebAssets.xml
+F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\obj\Debug\net5.0\BlogForPortfolioWebsite.MvcApplicationPartsAssemblyInfo.cs

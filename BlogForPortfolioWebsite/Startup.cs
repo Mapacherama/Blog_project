@@ -8,6 +8,7 @@ using BlogForPortfolioWebsite.Data.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -36,6 +37,10 @@ namespace BlogForPortfolioWebsite
                     MySqlServerVersion.LatestSupportedServerVersion,
                     optionsMysql => optionsMysql.EnableRetryOnFailure()));
 
+            services.AddDefaultIdentity<IdentityUser>()
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>();
+
             services.AddTransient<IRepository, Repository>();
             
             services.AddMvc(option => option.EnableEndpointRouting = false);
@@ -50,6 +55,8 @@ namespace BlogForPortfolioWebsite
             }
 
             app.UseMvcWithDefaultRoute();
+
+            app.UseAuthentication();
 
             /*app.UseEndpoints(endpoints =>
             {
