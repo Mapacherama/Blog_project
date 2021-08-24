@@ -145,7 +145,6 @@ F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\Blog
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\obj\Debug\net5.0\BlogForPortfolioWebsite.TagHelpers.input.cache
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\obj\Debug\net5.0\BlogForPortfolioWebsite.TagHelpers.output.cache
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\obj\Debug\net5.0\BlogForPortfolioWebsite.RazorCoreGenerate.cache
-F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\obj\Debug\net5.0\Razor\Views\Home\Edit.cshtml.g.cs
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\obj\Debug\net5.0\Razor\Views\Home\index.cshtml.g.cs
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\obj\Debug\net5.0\Razor\Views\Home\Post.cshtml.g.cs
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -182,3 +181,4 @@ F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\Blog
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\obj\Debug\net5.0\BlogForPortfolioWebsite.MvcApplicationPartsAssemblyInfo.cs
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\obj\Debug\net5.0\Razor\Views\Auth\Login.cshtml.g.cs
 F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\obj\Debug\net5.0\Razor\Views\Panel\Index.cshtml.g.cs
+F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\obj\Debug\net5.0\Razor\Views\Panel\Edit.cshtml.g.cs
