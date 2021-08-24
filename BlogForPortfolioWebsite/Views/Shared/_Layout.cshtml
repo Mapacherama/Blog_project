@@ -7,12 +7,22 @@
 </head>
 <body>
 <div>
-    <div>
-        <a asp-controller="Home" asp-action="Index">Home</a>
-        <a asp-controller="Home" asp-action="Post">Post</a>
-        <a asp-controller="Home" asp-action="Edit">Edit post</a>
-    </div>
+    <a asp-controller="Home" asp-action="Index">Home</a>
+    <a asp-controller="Home" asp-action="Edit">Create post</a>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <a asp-controller="Auth" asp-action="Logout">Logout, or Sign out over here!</a>
+    }
+    else
+    {
+        <a asp-controller="Auth" asp-action="Login">Login, or Sign in over here!</a>
+    }
+    
+</div>
+<div>
     @RenderBody()
 </div>
+
 </body>
 </html>

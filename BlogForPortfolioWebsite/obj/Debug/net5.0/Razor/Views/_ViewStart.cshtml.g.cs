@@ -19,8 +19,15 @@ using BlogForPortfolioWebsite.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "F:\Users\Jerome Tesselaar\Dropbox\Responsive Portfolio Website\Blog_project\BlogForPortfolioWebsite\Views\_ViewImports.cshtml"
+using BlogForPortfolioWebsite.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"101e29c025b7c28de6c86dbd7d29a3dfadd7316b", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f016578f92e81adb5d66210554282166d5e5d568", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"98e76b87645ab5b6cdcd3a969c604509f0cf1fc7", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

@@ -92,6 +92,66 @@
           "lib/netstandard2.0/K4os.Hash.xxHash.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Cryptography.Internal/5.0.9": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/5.0.9": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.Internal": "5.0.9"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/5.0.9": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.9",
+          "Microsoft.Extensions.Identity.Stores": "5.0.9"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Identity.UI/5.0.9": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Embedded": "5.0.9",
+          "Microsoft.Extensions.Identity.Stores": "5.0.9"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Identity.UI.Views.V4.dll": {},
+          "lib/net5.0/Microsoft.AspNetCore.Identity.UI.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Identity.UI.Views.V4.dll": {},
+          "lib/net5.0/Microsoft.AspNetCore.Identity.UI.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "buildTransitive/Microsoft.AspNetCore.Identity.UI.props": {},
+          "buildTransitive/Microsoft.AspnetCore.Identity.UI.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.AspNetCore.Identity.UI.props": {},
+          "buildMultiTargeting/Microsoft.AspnetCore.Identity.UI.targets": {}
+        }
+      },
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
@@ -308,6 +368,64 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Abstractions/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Embedded/5.0.9": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.Extensions.FileProviders.Embedded.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.Extensions.FileProviders.Embedded.dll": {}
+        },
+        "build": {
+          "build/netstandard2.0/_._": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Identity.Core/5.0.9": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "5.0.9",
+          "Microsoft.Extensions.Logging": "5.0.0",
+          "Microsoft.Extensions.Options": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.Extensions.Identity.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.Extensions.Identity.Core.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Identity.Stores/5.0.9": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Identity.Core": "5.0.9",
+          "Microsoft.Extensions.Logging": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.Extensions.Identity.Stores.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.Extensions.Identity.Stores.dll": {}
         }
       },
       "Microsoft.Extensions.Logging/5.0.0": {
@@ -535,16 +653,7 @@
           "lib/netstandard2.1/MySql.EntityFrameworkCore.dll": {}
         }
       },
-      "MySQLConnection/1.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/MySQLConnection.dll": {}
-        },
-        "runtime": {
-          "lib/MySQLConnection.dll": {}
-        }
-      },
-      "MySqlConnector/1.3.11": {
+      "MySqlConnector/1.3.10": {
         "type": "package",
         "compile": {
           "lib/net5.0/MySqlConnector.dll": {}
@@ -650,15 +759,6 @@
             "assetType": "native",
             "rid": "win-x86"
           }
-        }
-      },
-      "SqlLocalDb/1.1.0": {
-        "type": "package",
-        "compile": {
-          "lib/net451/SqlLocalDb.dll": {}
-        },
-        "runtime": {
-          "lib/net451/SqlLocalDb.dll": {}
         }
       },
       "System.Buffers/4.5.1": {
@@ -1940,6 +2040,119 @@
         "lib/netstandard2.0/K4os.Hash.xxHash.xml"
       ]
     },
+    "Microsoft.AspNetCore.Cryptography.Internal/5.0.9": {
+      "sha512": "hqKquh65noRtUHtpo2XNSKEZA9X67gkShZhDzgsUJSG7xfYlHheYVH8pxhD/IgfuIcseVzccIFV1civyjZMQ7w==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.cryptography.internal/5.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll",
+        "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.xml",
+        "lib/net5.0/Microsoft.AspNetCore.Cryptography.Internal.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Cryptography.Internal.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.xml",
+        "microsoft.aspnetcore.cryptography.internal.5.0.9.nupkg.sha512",
+        "microsoft.aspnetcore.cryptography.internal.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Cryptography.KeyDerivation/5.0.9": {
+      "sha512": "o9v+Uqw+LIM1Mn1jzn7EfCPgEXSrlg7F+NcR1WmnJt2Xd/rzeSYblTuhe9QB9WZNaXzud+SVKJVyBRQMiWAYYw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.cryptography.keyderivation/5.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+        "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
+        "lib/net5.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
+        "microsoft.aspnetcore.cryptography.keyderivation.5.0.9.nupkg.sha512",
+        "microsoft.aspnetcore.cryptography.keyderivation.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/5.0.9": {
+      "sha512": "lufIkVKM+f1OjlKzjU3vgOFAwndgYNAKPJIK8xsHsbVjDeXrmRN9XsDH6F6qkUIcvEQ8pqiB8ihVXOlZBF6keA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.identity.entityframeworkcore/5.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net5.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml",
+        "lib/netstandard2.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll",
+        "lib/netstandard2.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml",
+        "microsoft.aspnetcore.identity.entityframeworkcore.5.0.9.nupkg.sha512",
+        "microsoft.aspnetcore.identity.entityframeworkcore.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Identity.UI/5.0.9": {
+      "sha512": "cDk++UjaxhuFQYFJHkDQh9ABbUEfjo/Y828geyHHOdv9K83BtpmFA8QZDk9JtiMlAWWGOv+ST2npC/Sujt5f7A==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.identity.ui/5.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "build/Microsoft.AspNetCore.Identity.UI.props",
+        "build/Microsoft.AspnetCore.Identity.UI.targets",
+        "buildMultiTargeting/Microsoft.AspNetCore.Identity.UI.props",
+        "buildMultiTargeting/Microsoft.AspnetCore.Identity.UI.targets",
+        "buildTransitive/Microsoft.AspNetCore.Identity.UI.props",
+        "buildTransitive/Microsoft.AspnetCore.Identity.UI.targets",
+        "lib/net5.0/Microsoft.AspNetCore.Identity.UI.Views.V4.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Identity.UI.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Identity.UI.xml",
+        "microsoft.aspnetcore.identity.ui.5.0.9.nupkg.sha512",
+        "microsoft.aspnetcore.identity.ui.nuspec",
+        "staticwebassets/V4/css/site.css",
+        "staticwebassets/V4/favicon.ico",
+        "staticwebassets/V4/js/site.js",
+        "staticwebassets/V4/lib/bootstrap/LICENSE/LICENSE",
+        "staticwebassets/V4/lib/bootstrap/dist/css/bootstrap-grid.css",
+        "staticwebassets/V4/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+        "staticwebassets/V4/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+        "staticwebassets/V4/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+        "staticwebassets/V4/lib/bootstrap/dist/css/bootstrap-reboot.css",
+        "staticwebassets/V4/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+        "staticwebassets/V4/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+        "staticwebassets/V4/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+        "staticwebassets/V4/lib/bootstrap/dist/css/bootstrap.css",
+        "staticwebassets/V4/lib/bootstrap/dist/css/bootstrap.css.map",
+        "staticwebassets/V4/lib/bootstrap/dist/css/bootstrap.min.css",
+        "staticwebassets/V4/lib/bootstrap/dist/css/bootstrap.min.css.map",
+        "staticwebassets/V4/lib/bootstrap/dist/js/bootstrap.bundle.js",
+        "staticwebassets/V4/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+        "staticwebassets/V4/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+        "staticwebassets/V4/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+        "staticwebassets/V4/lib/bootstrap/dist/js/bootstrap.js",
+        "staticwebassets/V4/lib/bootstrap/dist/js/bootstrap.js.map",
+        "staticwebassets/V4/lib/bootstrap/dist/js/bootstrap.min.js",
+        "staticwebassets/V4/lib/bootstrap/dist/js/bootstrap.min.js.map",
+        "staticwebassets/V4/lib/jquery-validation-unobtrusive/LICENSE.txt",
+        "staticwebassets/V4/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+        "staticwebassets/V4/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+        "staticwebassets/V4/lib/jquery-validation/LICENSE.md",
+        "staticwebassets/V4/lib/jquery-validation/dist/additional-methods.js",
+        "staticwebassets/V4/lib/jquery-validation/dist/additional-methods.min.js",
+        "staticwebassets/V4/lib/jquery-validation/dist/jquery.validate.js",
+        "staticwebassets/V4/lib/jquery-validation/dist/jquery.validate.min.js",
+        "staticwebassets/V4/lib/jquery/LICENSE.txt",
+        "staticwebassets/V4/lib/jquery/dist/jquery.js",
+        "staticwebassets/V4/lib/jquery/dist/jquery.min.js",
+        "staticwebassets/V4/lib/jquery/dist/jquery.min.map"
+      ]
+    },
     "Microsoft.CSharp/4.7.0": {
       "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "type": "package",
@@ -2277,6 +2490,87 @@
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Microsoft.Extensions.FileProviders.Abstractions/5.0.0": {
+      "sha512": "iuZIiZ3mteEb+nsUqpGXKx2cGF+cv6gWPd5jqQI4hzqdiJ6I94ddLjKhQOuRW1lueHwocIw30xbSHGhQj0zjdQ==",
+      "type": "package",
+      "path": "microsoft.extensions.fileproviders.abstractions/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.FileProviders.Abstractions.dll",
+        "lib/net461/Microsoft.Extensions.FileProviders.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
+        "microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
+        "microsoft.extensions.fileproviders.abstractions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.Extensions.FileProviders.Embedded/5.0.9": {
+      "sha512": "idUegXBFo4t546X3BfLDGxFm59i/6cA7TrGVZg+glizO16Hirvd5tvh5qCTg04PRDXhww8FJaH+ktf3YDFJxiA==",
+      "type": "package",
+      "path": "microsoft.extensions.fileproviders.embedded/5.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "build/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.props",
+        "build/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.targets",
+        "buildMultiTargeting/Microsoft.Extensions.FileProviders.Embedded.props",
+        "buildMultiTargeting/Microsoft.Extensions.FileProviders.Embedded.targets",
+        "lib/net461/Microsoft.Extensions.FileProviders.Embedded.dll",
+        "lib/net461/Microsoft.Extensions.FileProviders.Embedded.xml",
+        "lib/net5.0/Microsoft.Extensions.FileProviders.Embedded.dll",
+        "lib/net5.0/Microsoft.Extensions.FileProviders.Embedded.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.xml",
+        "microsoft.extensions.fileproviders.embedded.5.0.9.nupkg.sha512",
+        "microsoft.extensions.fileproviders.embedded.nuspec",
+        "tasks/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.Manifest.Task.dll"
+      ]
+    },
+    "Microsoft.Extensions.Identity.Core/5.0.9": {
+      "sha512": "huZObey5ReQuyjm20d+ogSTCkJNB2162Wm1wKQUbrvb4hicqoBz+DLAX2fg7A5TzHQ2XOMkfpfw+t3z3bW1xuA==",
+      "type": "package",
+      "path": "microsoft.extensions.identity.core/5.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Identity.Core.dll",
+        "lib/net461/Microsoft.Extensions.Identity.Core.xml",
+        "lib/net5.0/Microsoft.Extensions.Identity.Core.dll",
+        "lib/net5.0/Microsoft.Extensions.Identity.Core.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.xml",
+        "microsoft.extensions.identity.core.5.0.9.nupkg.sha512",
+        "microsoft.extensions.identity.core.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Identity.Stores/5.0.9": {
+      "sha512": "SRJa3uaBvl72tqJ0hklSXLlfmRYSkA35IEtlPfgFBaIECeCwJKcBIJBs1jb9RBeRD4PSDVToL1rX6yYO6XI/Zw==",
+      "type": "package",
+      "path": "microsoft.extensions.identity.stores/5.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Identity.Stores.dll",
+        "lib/net461/Microsoft.Extensions.Identity.Stores.xml",
+        "lib/net5.0/Microsoft.Extensions.Identity.Stores.dll",
+        "lib/net5.0/Microsoft.Extensions.Identity.Stores.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Identity.Stores.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Identity.Stores.xml",
+        "microsoft.extensions.identity.stores.5.0.9.nupkg.sha512",
+        "microsoft.extensions.identity.stores.nuspec"
       ]
     },
     "Microsoft.Extensions.Logging/5.0.0": {
@@ -2662,22 +2956,10 @@
         "mysql.entityframeworkcore.nuspec"
       ]
     },
-    "MySQLConnection/1.0.1": {
-      "sha512": "/BflH+iLaysGbkUghDuQfrxc2Xi5ckxnqlTLlZYslYrFatqMv9+2d24EvVGKTsJO+hAZeuSs6jcO2ZIvxkkkqQ==",
+    "MySqlConnector/1.3.10": {
+      "sha512": "geL3pNiwbSXzUqQLHLm2/igDHuz5Q4qqp2rKczYoIHtdvvrsd5fnYHN8eFgP81qu77Blv0+0IOn69RJATNQoSQ==",
       "type": "package",
-      "path": "mysqlconnection/1.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MySQLConnection.dll",
-        "mysqlconnection.1.0.1.nupkg.sha512",
-        "mysqlconnection.nuspec"
-      ]
-    },
-    "MySqlConnector/1.3.11": {
-      "sha512": "CwzHwRTN+zMKYfEpfwWJ2QzI6JtTYujBbrVHp45zq1BttuykQkqGlZYL9ZUwA2x5xTRBJTDZoy9S6kfN6S0Suw==",
-      "type": "package",
-      "path": "mysqlconnector/1.3.11",
+      "path": "mysqlconnector/1.3.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2701,7 +2983,7 @@
         "lib/netstandard2.1/MySqlConnector.dll",
         "lib/netstandard2.1/MySqlConnector.xml",
         "logo.png",
-        "mysqlconnector.1.3.11.nupkg.sha512",
+        "mysqlconnector.1.3.10.nupkg.sha512",
         "mysqlconnector.nuspec"
       ]
     },
@@ -2821,18 +3103,6 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "SqlLocalDb/1.1.0": {
-      "sha512": "BKQGi5uiGJVIzqemSjzrtw+mVgPhawI79qCctJURyo03Cwt6gwwIpT1q1va8Au3dSaLTeZOXELD/vjQvN8h2cQ==",
-      "type": "package",
-      "path": "sqllocaldb/1.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net451/SqlLocalDb.dll",
-        "sqllocaldb.1.1.0.nupkg.sha512",
-        "sqllocaldb.nuspec"
       ]
     },
     "System.Buffers/4.5.1": {
@@ -6531,14 +6801,13 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "EntityFramework >= 6.4.4",
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.9",
+      "Microsoft.AspNetCore.Identity.UI >= 5.0.9",
       "Microsoft.EntityFrameworkCore >= 5.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.9",
-      "MySQLConnection >= 1.0.1",
       "MySql.EntityFrameworkCore >= 5.0.5",
-      "MySqlConnector >= 1.3.11",
-      "Pomelo.EntityFrameworkCore.MySql >= 5.0.1",
-      "SqlLocalDb >= 1.1.0"
+      "Pomelo.EntityFrameworkCore.MySql >= 5.0.1"
     ]
   },
   "packageFolders": {
@@ -6582,6 +6851,14 @@
             "target": "Package",
             "version": "[6.4.4, )"
           },
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[5.0.9, )"
+          },
+          "Microsoft.AspNetCore.Identity.UI": {
+            "target": "Package",
+            "version": "[5.0.9, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[5.0.9, )"
@@ -6596,25 +6873,13 @@
             "target": "Package",
             "version": "[5.0.9, )"
           },
-          "MySQLConnection": {
-            "target": "Package",
-            "version": "[1.0.1, )"
-          },
           "MySql.EntityFrameworkCore": {
             "target": "Package",
             "version": "[5.0.5, )"
           },
-          "MySqlConnector": {
-            "target": "Package",
-            "version": "[1.3.11, )"
-          },
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",
             "version": "[5.0.1, )"
-          },
-          "SqlLocalDb": {
-            "target": "Package",
-            "version": "[1.1.0, )"
           }
         },
         "imports": [
@@ -6638,27 +6903,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'MySQLConnection 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
-      "libraryId": "MySQLConnection",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'SqlLocalDb 1.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
-      "libraryId": "SqlLocalDb",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  }
 }
