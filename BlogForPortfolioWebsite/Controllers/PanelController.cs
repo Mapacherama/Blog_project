@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using BlogForPortfolioWebsite.Data.FileManager;
 using BlogForPortfolioWebsite.Data.Repository;
 using BlogForPortfolioWebsite.Models;
 using BlogForPortfolioWebsite.ViewModels;
@@ -11,10 +12,14 @@ namespace BlogForPortfolioWebsite.Controllers
     public class PanelController : Controller
     {
         private readonly IRepository _repo;
+        private readonly IFileManager _fileManager;
 
-        public PanelController(IRepository repo)
+        public PanelController(IRepository repo,
+            IFileManager fileManager
+        )
         {
             _repo = repo;
+            _fileManager = fileManager;
         }
 
         public IActionResult Index()
@@ -50,7 +55,7 @@ namespace BlogForPortfolioWebsite.Controllers
                 Id = vm.Id,
                 Title = vm.Title,
                 Body = vm.Body,
-                Image = "" // Handle image
+                Image = await _fileManager.SaveImage(vm.Image) // Handle image
             };
             if (post.Id > 0)
                 _repo.UpdatePost(post);

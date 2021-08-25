@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -14,16 +15,38 @@ namespace BlogForPortfolioWebsite.Data.FileManager
             _imagePath = config["Path:Images"];
         }
 
-        public Task<string> SaveImage(IFormFile image)
+        public FileStream ImageStream(string image)
         {
-            var save_path = Path.Combine(_imagePath);
-            if (!Directory.Exists(save_path))
+            return new FileStream(Path.Combine(_imagePath, image), FileMode.Open, FileAccess.Read);
+        }
+
+        public async Task<string> SaveImage(IFormFile image)
+        {
+            try
             {
-                Directory.CreateDirectory(save_path);
+                var save_path = Path.Combine(_imagePath);
+                if (!Directory.Exists(save_path))
+                {
+                    Directory.CreateDirectory(save_path);
+                }
+
+                // Internet Explorer Error C:/User/Foo/image.jpg
+                // var fileName = image.FileName;
+                var mime = image.FileName.Substring(image.FileName.LastIndexOf('.'));
+                var fileName = $"img_{DateTime.Now.ToString("dd-MM-yyyy-HH-mm-ss")}{mime}";
+
+                using (var fileStream = new FileStream(Path.Combine(save_path, fileName), FileMode.Create))
+                {
+                    await image.CopyToAsync(fileStream);
+                }
+
+                return fileName;
             }
-            
-            // Internet Explorer Error
-            // var fileName = image.FileName;
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return "Error";
+            }
         }
     }
 }

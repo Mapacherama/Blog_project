@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using BlogForPortfolioWebsite.Data.FileManager;
 using BlogForPortfolioWebsite.Data.Repository;
 using BlogForPortfolioWebsite.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -8,10 +9,13 @@ namespace BlogForPortfolioWebsite.Controllers
     public class HomeController : Controller
     {
         private readonly IRepository _repo;
+        private readonly IFileManager _fileManager;
 
-        public HomeController(IRepository repo)
+        public HomeController(IRepository repo,
+            IFileManager fileManager)
         {
             _repo = repo;
+            _fileManager = fileManager;
         }
 
         public IActionResult Index()
@@ -25,6 +29,13 @@ namespace BlogForPortfolioWebsite.Controllers
         {
             var post = _repo.GetPost(id);
             return View(post);
+        }
+
+        [HttpGet("/Image/{image}")]
+        public IActionResult Image(string image)
+        {
+            var mime = image.Substring(image.LastIndexOf('.') + 1);
+            return new FileStreamResult(_fileManager.ImageStream(image), $"image/{mime}");
         }
         
     }

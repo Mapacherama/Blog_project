@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using BlogForPortfolioWebsite.Data;
+using BlogForPortfolioWebsite.Data.FileManager;
 using BlogForPortfolioWebsite.Data.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -46,6 +47,7 @@ namespace BlogForPortfolioWebsite
             services.ConfigureApplicationCookie(options => { options.LoginPath = "/Auth/Login"; });
 
             services.AddTransient<IRepository, Repository>();
+            services.AddTransient<IFileManager, FileManager>();
 
             services.AddMvc(option => option.EnableEndpointRouting = false);
         }
