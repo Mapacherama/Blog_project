@@ -5,21 +5,25 @@
 }
 <section class="panel__edit section">
     <div>
-        <form asp-controller="Panel" asp-action="Edit" method="post" enctype="multipart/form-data">
+        <form class="edit__form grid" asp-controller="Panel" asp-action="Edit" method="post" enctype="multipart/form-data">
             <input asp-for="Id" type="hidden">
-            <div>
-                <label>Title</label>
-                <input asp-for="Title">
+            <div class="edit__inputs edit__grid margin-top margin-top">
+                <div class = "sign__in_content">
+                    <label class="edit__label">Title</label>
+                    <input class="edit__input" asp-for="Title">
+                </div>
+                <div class = "sign__in_content">
+                    <label class="edit__label">Body</label>
+                    <input class="edit__input" asp-for="Body">
+                </div>
+                <div class = "sign__in_content">
+                    <label class="edit__label">Image</label>
+                    <input class="edit__input" asp-for="Image">
+                </div>
+                <div>
+                    <input type="submit" value="Submit" class="button--flex button">
+                </div>
             </div>
-            <div>
-                <label>Body</label>
-                <input asp-for="Body">
-            </div>
-            <div>
-                <label>Image</label>
-                <input asp-for="Image">
-            </div>
-            <input type="submit" value="Submit">
         </form>
     </div>
 </section>

@@ -3,18 +3,23 @@
 @{
 
 }
-
-<form class="sign-in-form" asp-controller="Auth" asp-action="Login" method="post">
+<section class="sign-in section">
     <div>
-        <label>Username</label>
-        <input asp-for="UserName" />
+        <form class="sign-in-form grid" asp-controller="Auth" asp-action="Login" method="post">
+            <div class="sign__in_inputs sign__in_grid">
+                <div class="sign__in_content">
+                    <label class="edit__label">Username</label>
+                    <input class = "edit__input" asp-for="UserName"/>
+                </div>
+                <div class="sign__in_content">
+                    <label class="edit__label">Password</label>
+                    @* type="password" *@
+                    <input class = "edit__input" asp-for="Password"/>
+                </div>
+                <div>
+                    <input class="button button--flex" type="submit" value="Sign In"/>
+                </div>
+            </div>
+        </form>
     </div>
-    <div>
-        <label>Password</label>
-        @* type="password" *@
-        <input asp-for="Password" />
-    </div>
-    <div>
-        <input type="submit" value="Sign In" />
-    </div>
-</form>
+</section>
