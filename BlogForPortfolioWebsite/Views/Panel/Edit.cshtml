@@ -3,22 +3,23 @@
 @{
 
 }
-
-<div>
-    <form asp-controller="Panel" asp-action="Edit" method="post" enctype="multipart/form-data">
-        <input asp-for="Id" type="hidden">
-        <div>
-            <label>Title</label>
-            <input asp-for="Title">
-        </div>
-        <div>
-            <label>Body</label>
-            <input asp-for="Body">
-        </div>
-        <div>
-            <label>Image</label>
-            <input asp-for="Image">
-        </div>
-        <input type="submit" value="Submit">
-    </form>
-</div>
+<section class="panel__edit section">
+    <div>
+        <form asp-controller="Panel" asp-action="Edit" method="post" enctype="multipart/form-data">
+            <input asp-for="Id" type="hidden">
+            <div>
+                <label>Title</label>
+                <input asp-for="Title">
+            </div>
+            <div>
+                <label>Body</label>
+                <input asp-for="Body">
+            </div>
+            <div>
+                <label>Image</label>
+                <input asp-for="Image">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</section>

@@ -1,23 +1,26 @@
-<h2>Admin Panel!</h2>
-<a asp-controller="Panel" asp-action="Edit">
-    Add New Post
-</a>
-
-<div>
-    <ul>
-        @foreach (var post in Model)
-        {
-            <li>
-                @post.Title
-                -
-                <a asp-controller="Panel" asp-action="Edit" asp-route-id="@post.Id">
-                    Edit
-                </a>
-                -
-                <a asp-controller="Panel" asp-action="Remove" asp-route-id="@post.Id">
-                    Remove
-                </a>
-            </li>
-        }
-    </ul>
-</div>
+<section class="panel section">
+    <div class="panel__container container grid">
+        <h2 class="section__title">Admin Panel!</h2>
+        <div class="panel__new__post">
+            <a class="panel__link" asp-controller="Panel" asp-action="Edit">
+                <h3 class="section__subtitle">Add New Post</h3>
+            </a>
+        </div>
+        <ul class="panel__links">
+            @foreach (var post in Model)
+            {
+                <li class="panel__list">
+                    <h2 class="section__title">@post.Title</h2>
+                    <span class="panel__link">-</span>
+                    <a class="panel__link" asp-controller="Panel" asp-action="Edit" asp-route-id="@post.Id">
+                        Edit
+                    </a>
+                    <span class="panel__link">-</span>
+                    <a class="panel__link" asp-controller="Panel" asp-action="Remove" asp-route-id="@post.Id">
+                        Remove
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</section>
