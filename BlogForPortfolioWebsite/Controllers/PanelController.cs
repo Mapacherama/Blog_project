@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using BlogForPortfolioWebsite.Data.Repository;
 using BlogForPortfolioWebsite.Models;
+using BlogForPortfolioWebsite.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,17 +27,31 @@ namespace BlogForPortfolioWebsite.Controllers
         public IActionResult Edit(int? id)
         {
             if (id == null)
-                return View(new Post());
+            {
+                return View(new PostViewModel());
+            }
             else
             {
                 var post = _repo.GetPost((int) id);
-                return View(post);
+                return View(new PostViewModel
+                {
+                    Id = post.Id,
+                    Title = post.Title,
+                    Body = post.Body
+                });
             }
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(Post post)
+        public async Task<IActionResult> Edit(PostViewModel vm)
         {
+            var post = new Post
+            {
+                Id = vm.Id,
+                Title = vm.Title,
+                Body = vm.Body,
+                Image = "" // Handle image
+            };
             if (post.Id > 0)
                 _repo.UpdatePost(post);
             else
@@ -45,7 +60,7 @@ namespace BlogForPortfolioWebsite.Controllers
             if (await _repo.SaveChangesAsync())
                 return RedirectToAction("Index");
             else
-                return View(post);
+                return View(vm);
         }
 
         [HttpGet]
@@ -55,7 +70,6 @@ namespace BlogForPortfolioWebsite.Controllers
             await _repo.SaveChangesAsync();
 
             return RedirectToAction("Index");
-
         }
     }
 }
