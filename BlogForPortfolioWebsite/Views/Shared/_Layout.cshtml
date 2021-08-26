@@ -4,15 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+    <link href="~/css/styles.css" rel="stylesheet">
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
+<header class="header">
+    <nav class="nav container">
+        <div>
+            <a href="#" class="nav__logo">Mapacherama<span class="trademark">™</span></a>
+        </div>
+        <a class="nav__link" asp-controller="Home" asp-action="Index">Home</a>
+        <a class="nav__link" asp-controller="Panel" asp-action="Edit">Create post</a>
+
+        <a class="nav__link" asp-controller="Panel" asp-action="Index">Admin Panel</a>
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a class="nav__link" asp-controller="Auth" asp-action="Logout">Logout, or Sign out over here!</a>
+        }
+        else
+        {
+            <a class="nav__link" asp-controller="Auth" asp-action="Login">Login, or Sign in over here!</a>
+        }
+        <div class="nav__btns">
+            <i class="uil uil-moon change-theme" id="theme-button"></i>
+        </div>
+    </nav>
+</header>
 <div>
-    <div>
-        <a asp-controller="Home" asp-action="Index">Home</a>
-        <a asp-controller="Home" asp-action="Post">Post</a>
-        <a asp-controller="Home" asp-action="Edit">Edit post</a>
-    </div>
     @RenderBody()
 </div>
+<script src="~/js/main.js"></script>
 </body>
 </html>

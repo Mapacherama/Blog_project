@@ -1,1 +1,21 @@
-<h2>This is a post!</h2>
+@model Post
+
+@{
+
+}
+<section class="home section" id="home">
+    <div class="home__container container flex">
+        <h2 class="section__title">@Model.Title</h2>
+
+        <div class="home__flex">
+            <div class="margin-bottom">
+            @if (!String.IsNullOrEmpty(Model.Image))
+            {
+                var image_path = $"/Image/{Model.Image}";
+                <img src="@image_path" width="500px"/>
+            }
+            <p class="home__post__description">@Model.Body</p>
+            </div>
+        </div>
+    </div>
+</section>

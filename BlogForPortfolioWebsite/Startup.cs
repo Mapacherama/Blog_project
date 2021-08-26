@@ -4,16 +4,15 @@ using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using BlogForPortfolioWebsite.Data;
+using BlogForPortfolioWebsite.Data.FileManager;
+using BlogForPortfolioWebsite.Data.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MySql.Data.MySqlClient;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace BlogForPortfolioWebsite
 {
@@ -34,6 +33,22 @@ namespace BlogForPortfolioWebsite
                 options.UseMySql(_configuration.GetConnectionString("DefaultConnection"),
                     MySqlServerVersion.LatestSupportedServerVersion,
                     optionsMysql => optionsMysql.EnableRetryOnFailure()));
+
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+                {
+                    options.Password.RequireDigit = false;
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequireUppercase = false;
+                    options.Password.RequiredLength = 8;
+                })
+                // .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>();
+
+            services.ConfigureApplicationCookie(options => { options.LoginPath = "/Auth/Login"; });
+
+            services.AddTransient<IRepository, Repository>();
+            services.AddTransient<IFileManager, FileManager>();
+
             services.AddMvc(option => option.EnableEndpointRouting = false);
         }
 
@@ -44,6 +59,10 @@ namespace BlogForPortfolioWebsite
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseStaticFiles();
+
+            app.UseAuthentication();
 
             app.UseMvcWithDefaultRoute();
 

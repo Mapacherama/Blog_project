@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
-using BlogForPortfolioWebsite.Data;
+using BlogForPortfolioWebsite.Data.FileManager;
+using BlogForPortfolioWebsite.Data.Repository;
 using BlogForPortfolioWebsite.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,39 +8,35 @@ namespace BlogForPortfolioWebsite.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly AppDbContext _ctx;
+        private readonly IRepository _repo;
+        private readonly IFileManager _fileManager;
 
-        public HomeController(AppDbContext ctx)
+        public HomeController(IRepository repo,
+            IFileManager fileManager)
         {
-            _ctx = ctx;
+            _repo = repo;
+            _fileManager = fileManager;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var posts = _repo.GetAllPosts();
+            return View(posts);
         }
         
         [HttpGet]
-        public IActionResult Post()
+        public IActionResult Post(int id)
         {
-            return View();
+            var post = _repo.GetPost(id);
+            return View(post);
+        }
+
+        [HttpGet("/Image/{image}")]
+        public IActionResult Image(string image)
+        {
+            var mime = image.Substring(image.LastIndexOf('.') + 1);
+            return new FileStreamResult(_fileManager.ImageStream(image), $"image/{mime}");
         }
         
-        [HttpGet]
-        public IActionResult Edit()
-        {
-            return View(new Post());
-        }
-        
-        [HttpPost]
-        public async Task <IActionResult> Edit(Post post)
-        {
-            _ctx.Posts.Add(post);
-            await _ctx.SaveChangesAsync();
-
-            return RedirectToAction("Index");
-        }
-
-
     }
 }

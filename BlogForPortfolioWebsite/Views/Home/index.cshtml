@@ -1,1 +1,34 @@
-<h2>Home page</h2>
+@model IEnumerable<Post>
+
+@{
+
+}
+
+<section class="home section" id="home">
+    <div class="home__container container flex">
+        <h2 class="section__title">Home page</h2>
+
+        <div class="home__flex">
+            <div class="margin-bottom">
+                <img class="home__img" src="content/static/3d82d5a0568b6a9f52cd25341e989df4.jpg"/>
+            </div>
+            <div>
+                <div class="margin-bottom">
+                    <h2 class="section__title">
+                        List of posts:
+                    </h2>
+                </div>
+                <ul class="home__links">
+                    @foreach (var post in Model)
+                    {
+                        <li class="home__list">
+                            <a class="home__link" asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">
+                                @post.Title , click on me to see my precious contents!
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,30 @@
+@model PostViewModel
+
+@{
+
+}
+<section class="panel__edit section">
+    <div class="edit__container">
+        <h1 class="section__title">Create or edit a new post over here:</h1>
+        <form class="edit__form grid" asp-controller="Panel" asp-action="Edit" method="post" enctype="multipart/form-data">
+            <input asp-for="Id" type="hidden">
+            <div class="edit__inputs edit__grid">
+                <div class="sign__in_content">
+                    <label class="edit__label">Title</label>
+                    <input class="edit__input" asp-for="Title">
+                </div>
+                <div class="sign__in_content">
+                    <label class="edit__label">Body</label>
+                    <input class="edit__input" asp-for="Body">
+                </div>
+                <div class="sign__in_content">
+                    <label class="edit__label">Image</label>
+                    <input class="edit__input" asp-for="Image">
+                </div>
+                <div>
+                    <input type="submit" value="Submit" class="button--flex button">
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
