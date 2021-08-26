@@ -3,6 +3,7 @@
 @{
 
 }
+<link href="~/lib/Trumbowyg-main/dist/ui/trumbowyg.min.css" rel="stylesheet" />
 <section class="panel__edit section">
     <div class="edit__container">
         <h1 class="section__title">Create or edit a new post over here:</h1>
@@ -15,7 +16,7 @@
                 </div>
                 <div class="sign__in_content">
                     <label class="edit__label">Body</label>
-                    <input class="edit__input" asp-for="Body">
+                    <textarea id="editor" asp-for="Body"></textarea>
                 </div>
                 <div class="sign__in_content">
                     <label class="edit__label">Image</label>
@@ -28,3 +29,14 @@
         </form>
     </div>
 </section>
+
+@section scripts {
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="~/lib/Trumbowyg-main/dist/trumbowyg.min.js"></script>
+    <script>
+        $('#editor').trumbowyg();
+        // . - class
+        // # - id
+        // nav - html element
+    </script>
+}

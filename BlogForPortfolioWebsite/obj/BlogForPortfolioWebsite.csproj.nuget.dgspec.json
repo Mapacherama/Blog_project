@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Users\\Jerome Tesselaar\\Dropbox\\Responsive Portfolio Website\\Blog_project\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj": {}
+    "F:\\Users\\Jerome Tesselaar\\Dropbox\\Projects\\Blog_project\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj": {}
   },
   "projects": {
-    "F:\\Users\\Jerome Tesselaar\\Dropbox\\Responsive Portfolio Website\\Blog_project\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj": {
+    "F:\\Users\\Jerome Tesselaar\\Dropbox\\Projects\\Blog_project\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Responsive Portfolio Website\\Blog_project\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj",
+        "projectUniqueName": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Projects\\Blog_project\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj",
         "projectName": "BlogForPortfolioWebsite",
-        "projectPath": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Responsive Portfolio Website\\Blog_project\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj",
+        "projectPath": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Projects\\Blog_project\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj",
         "packagesPath": "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\",
-        "outputPath": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Responsive Portfolio Website\\Blog_project\\BlogForPortfolioWebsite\\obj\\",
+        "outputPath": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Projects\\Blog_project\\BlogForPortfolioWebsite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jerome Tesselaar\\AppData\\Roaming\\NuGet\\NuGet.Config"

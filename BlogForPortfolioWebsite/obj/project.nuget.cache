@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t4f1V4KsV3NNtIF2sP5zCXiuA6ZH61QyZDhD9iU3VakZZ2+oyXAu4vAJqqyoXLgdWEHHgf72/lp+Qahc33IEtg==",
+  "dgSpecHash": "Qe9YD8ZEda40ii1R5IWdK2iUutPhD8j1LEpp6wapwzTTnXxPeD2+fMAB57bUNtO6ck7Rv43pnlMLJY0gZPxXfg==",
   "success": true,
-  "projectFilePath": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Responsive Portfolio Website\\Blog_project\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj",
+  "projectFilePath": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Projects\\Blog_project\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",

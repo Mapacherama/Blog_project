@@ -12,13 +12,13 @@
                 {
                     <li class="panel__list">
                         <h2 class="section__title">@post.Title</h2>
-                        <span class="panel__link">-</span>
+                        <span>-</span>
                         <a class="panel__link" asp-controller="Panel" asp-action="Edit" asp-route-id="@post.Id">
-                            Edit
+                            <span class="panel__edit__post">Edit</span>
                         </a>
-                        <span class="panel__link">-</span>
+                        <span>-</span>
                         <a class="panel__link" asp-controller="Panel" asp-action="Remove" asp-route-id="@post.Id">
-                            Remove
+                            <span class="panel__remove__post">Remove</span>
                         </a>
                     </li>
                 }

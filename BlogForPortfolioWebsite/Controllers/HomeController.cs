@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using BlogForPortfolioWebsite.Data.FileManager;
 using BlogForPortfolioWebsite.Data.Repository;
@@ -28,6 +29,10 @@ namespace BlogForPortfolioWebsite.Controllers
         public IActionResult Post(int id)
         {
             var post = _repo.GetPost(id);
+            if (post.Image == "Error")
+            {
+                post.Image = String.Empty;
+            }
             return View(post);
         }
 
