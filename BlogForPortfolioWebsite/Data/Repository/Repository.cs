@@ -14,7 +14,20 @@ namespace BlogForPortfolioWebsite.Data.Repository
         {
             _ctx = ctx;
         }
-        
+
+        public List<Post> GetAllPosts(string category)
+        {
+            Func<Post, bool> inCategory = post => post.Category.ToLower().Equals(category.ToLower()); 
+            // inCategory(a) = 5
+            // inCategory(b) = 10
+            // var a = 5
+            // F#, clojure, Haskell.
+            
+            return _ctx.Posts
+                .Where(post => inCategory(post))
+                .ToList();
+        }
+
         public void AddPost(Post post)
         {
             _ctx.Posts.Add(post);
@@ -24,7 +37,7 @@ namespace BlogForPortfolioWebsite.Data.Repository
         {
             return _ctx.Posts.ToList();
         }
-        
+
         public Post GetPost(int id)
         {
             return _ctx.Posts.FirstOrDefault(p => p.Id == id);

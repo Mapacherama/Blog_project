@@ -455,6 +455,9 @@ img {
 
 .home__img {
     width: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .home__links{
