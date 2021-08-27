@@ -12,23 +12,52 @@
 <header class="header">
     <nav class="nav container">
         <div>
-            <a href="#" class="nav__logo">Mapacherama<span class="trademark">™</span></a>
+            <a asp-controller="Home" asp-action="Index" class="nav__logo">Mapacherama<span class="trademark">™</span></a>
         </div>
-        <a class="nav__link" asp-controller="Home" asp-action="Index">Home</a>
-        <a class="nav__link" asp-controller="Panel" asp-action="Edit">Create post</a>
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list grid">
+                <li class="nav__item">
+                    <a class="nav__link" asp-controller="Home" asp-action="Index">
+                        <i class="uil uil-home nav__icon"></i> Home
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" asp-controller="Panel" asp-action="Edit">
+                        <i class="uil uil-plus nav__icon"></i> Create post
+                    </a>
+                </li>
 
-        <a class="nav__link" asp-controller="Panel" asp-action="Index">Admin Panel</a>
+                <li class="nav__item">
+                    <a class="nav__link" asp-controller="Panel" asp-action="Index">
+                        <i class="uil uil-panel-add nav__icon"></i> Admin Panel
+                    </a>
+                </li>
 
-        @if (User.Identity.IsAuthenticated)
-        {
-            <a class="nav__link" asp-controller="Auth" asp-action="Logout">Logout, or Sign out over here!</a>
-        }
-        else
-        {
-            <a class="nav__link" asp-controller="Auth" asp-action="Login">Login, or Sign in over here!</a>
-        }
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav__item">
+                        <a class="nav__link" asp-controller="Auth" asp-action="Logout">
+                            <i class="uil uil-sign-out-alt nav__icon"></i> Logout, or Sign out over here!
+                        </a>
+                        <i class="uil uil-times nav__close" id="nav-close"></i>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav__item">
+                        <a class="nav__link" asp-controller="Auth" asp-action="Login">
+                            <i class="uil uil-sign-in-alt nav__icon"></i> Login, or Sign in over here!
+                        </a>
+                        <i class="uil uil-times nav__close" id="nav-close"></i>
+                    </li>
+                }
+            </ul>
+        </div>
         <div class="nav__btns">
             <i class="uil uil-moon change-theme" id="theme-button"></i>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="uil uil-apps"></i>
+            </div>
         </div>
     </nav>
 </header>
