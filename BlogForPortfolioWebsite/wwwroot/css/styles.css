@@ -122,9 +122,23 @@ img {
     margin-bottom: var(--mb-3);
 }
 
+.section__title-left {
+    font-size: var(--h1-font-size);
+}
+
+.section__subtitle-left {
+    display: block;
+    font-size: var(--h2-font-size);
+}
+
 .section__title,
 .section__subtitle {
     text-align: center;
+}
+
+.section__title-left,
+.section__subtitle-left {
+    text-align: left;
 }
 
 .margin-bottom {
@@ -345,6 +359,13 @@ img {
     color: hsl(0, 100%, 50%);
 }
 
+.flex__admin-button{
+    display: flex;
+    gap: .75rem;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .margin-top-header{
     margin-top: 1.75rem;
@@ -557,7 +578,7 @@ body.dark-theme {
         margin-right: auto;
     }
     
-    .flex{
+    .title__container{
         margin-top: 2rem;
     }
 
