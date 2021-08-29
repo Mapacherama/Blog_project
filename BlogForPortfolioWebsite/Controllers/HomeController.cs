@@ -1,8 +1,6 @@
 using System;
-using System.Threading.Tasks;
 using BlogForPortfolioWebsite.Data.FileManager;
 using BlogForPortfolioWebsite.Data.Repository;
-using BlogForPortfolioWebsite.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogForPortfolioWebsite.Controllers
@@ -19,20 +17,9 @@ namespace BlogForPortfolioWebsite.Controllers
             _fileManager = fileManager;
         }
 
-        public IActionResult Index(string category)
-        {
-            var posts = string.IsNullOrEmpty(category) ? _repo.GetAllPosts() : _repo.GetAllPosts(category);
-            return View(posts);
-        }
+        public IActionResult Index(string category) =>
+            View(string.IsNullOrEmpty(category) ? _repo.GetAllPosts() : _repo.GetAllPosts(category));
 
-
-        /*public IActionResult Index(string category)
-        {
-            var posts = string.IsNullOrEmpty(category) ? _repo.GetAllPosts() : _repo.GetAllPosts(category);
-            // boolean ? true : false; 1 = 1? run : ignore.
-            return View(posts);
-        }*/
-        
         [HttpGet]
         public IActionResult Post(int id)
         {
@@ -41,15 +28,26 @@ namespace BlogForPortfolioWebsite.Controllers
             {
                 post.Image = String.Empty;
             }
+
             return View(post);
         }
 
         [HttpGet("/Image/{image}")]
+        public IActionResult Image(string image) => new FileStreamResult(_fileManager.ImageStream(image),
+            $"image/{image.Substring(image.LastIndexOf('.') + 1)}");
+
+        /*public IActionResult Index(string category)
+        {
+            var posts = string.IsNullOrEmpty(category) ? _repo.GetAllPosts() : _repo.GetAllPosts(category);
+            // boolean ? true : false; 1 = 1? run : ignore.
+            return View(posts);
+        }*/
+
+        /*[HttpGet("/Image/{image}")]
         public IActionResult Image(string image)
         {
             var mime = image.Substring(image.LastIndexOf('.') + 1);
             return new FileStreamResult(_fileManager.ImageStream(image), $"image/{mime}");
-        }
-        
+        }*/
     }
 }
