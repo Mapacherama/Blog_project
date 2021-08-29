@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b67ee470-6d61-4397-8b16-3982e477bef3" name="mapacherama.com" url="http://mapacherama.com">
+        <fileTransfer rootFolder="/blog.mapacherama.com" host="mapacherama.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
