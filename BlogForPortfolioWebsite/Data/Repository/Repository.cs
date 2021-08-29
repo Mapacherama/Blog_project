@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BlogForPortfolioWebsite.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlogForPortfolioWebsite.Data.Repository
 {
@@ -17,14 +18,13 @@ namespace BlogForPortfolioWebsite.Data.Repository
 
         public List<Post> GetAllPosts(string category)
         {
-            Func<Post, bool> inCategory = post => post.Category.ToLower().Equals(category.ToLower()); 
             // inCategory(a) = 5
             // inCategory(b) = 10
             // var a = 5
             // F#, clojure, Haskell.
             
             return _ctx.Posts
-                .Where(post => inCategory(post))
+                .Where(post => post.Category.ToLower().Equals(category.ToLower()))
                 .ToList();
         }
 
