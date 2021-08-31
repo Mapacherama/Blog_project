@@ -48,5 +48,22 @@ namespace BlogForPortfolioWebsite.Data.FileManager
                 return "Error";
             }
         }
+
+        public void RemoveImage(string image)
+        {
+            try
+            {
+                {
+                    var file = Path.Combine(_imagePath, image);
+
+                    if (File.Exists(file))
+                        File.Delete(file);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }

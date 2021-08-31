@@ -40,7 +40,9 @@
                     <input class="edit__input" asp-for="Image">
                 </div>
                 <div>
-                    <input type="submit" value="Submit" class="button--flex button">
+                    <button type="submit" value="Submit" class="button--flex button">
+                        <i class="uil uil-plus"></i> Update or create post
+                    </button>
                 </div>
             </div>
         </form>
@@ -49,7 +51,7 @@
 
 @section scripts {
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="~/lib/Trumbowyg-main/dist/trumbowyg.min.js"></script>
+    <script src="~/lib/Trumbowyg-main/dist/trumbowyg.js"></script>
     <script>
         $('#editor').trumbowyg();
         // . - class

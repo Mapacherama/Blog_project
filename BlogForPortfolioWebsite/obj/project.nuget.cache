@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Qe9YD8ZEda40ii1R5IWdK2iUutPhD8j1LEpp6wapwzTTnXxPeD2+fMAB57bUNtO6ck7Rv43pnlMLJY0gZPxXfg==",
+  "dgSpecHash": "i9b/WqnucKOnKYkSDwJ0m1IZsYmr66giiu0x82XG9GVOHPUUjAXNoZZsYGhone4aOtW4ExhECuwf7vLivqT9pw==",
   "success": true,
   "projectFilePath": "F:\\Users\\Jerome Tesselaar\\Dropbox\\Projects\\Blog_project\\BlogForPortfolioWebsite\\BlogForPortfolioWebsite.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,6 @@
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.9\\microsoft.aspnetcore.cryptography.internal.5.0.9.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.9\\microsoft.aspnetcore.cryptography.keyderivation.5.0.9.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.9\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.9.nupkg.sha512",
-    "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\5.0.9\\microsoft.aspnetcore.identity.ui.5.0.9.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
@@ -29,8 +28,6 @@
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.2\\microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\5.0.9\\microsoft.extensions.fileproviders.embedded.5.0.9.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.extensions.identity.core\\5.0.9\\microsoft.extensions.identity.core.5.0.9.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.extensions.identity.stores\\5.0.9\\microsoft.extensions.identity.stores.5.0.9.nupkg.sha512",
     "C:\\Users\\Jerome Tesselaar\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
